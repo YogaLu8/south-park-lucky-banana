@@ -47,3 +47,11 @@ venv/
 
 # 本地测试截图
 /screenshots/
+
+# Ren'Py 备份文件
+*.bak
+game/*.bak
+
+# 翻译缓存
+game/tl/**/*.rpymc
+game/tl/**/*.rpyc
