@@ -300,6 +300,9 @@ screen navigation():
 
         textbutton _("读取游戏") action ShowMenu("load")
 
+        if main_menu:
+                textbutton _("结局图鉴") action ShowMenu("endings_gallery")
+
         textbutton _("设置") action ShowMenu("preferences")
 
         if _in_replay:

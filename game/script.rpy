@@ -39,6 +39,7 @@ default weddy_help = False
 default music = False
 default note = False
 default ball = False
+default persistent.endings_unlocked = []
 #启动器开启之后触发
 label start:
     stop music fadeout 1.0 #不要等号直接加数字
@@ -346,6 +347,7 @@ label end1:
     "什么都没改变..."
 
     "结局一 失败的肯尼"
+    $ unlock_ending("end1")
 
 menu:
     "回到前一个选项":
@@ -527,6 +529,7 @@ label box3:
     "肯尼的死因被定性为意外 没有人为此负责"
     "主办方赔了肯尼家两百块 肯尼他爸当天就拿去买了彩票"
     "结局二 擂台的可怜虫"
+    $ unlock_ending("end2")
 menu:
     "回到上个选项":
         scene bg boxing ring
@@ -646,6 +649,7 @@ label box4:
     ky "哦 那没事了"
 
     "结局三 金钱的泡影"
+    $ unlock_ending("end3")
 menu:
     "回到上个选项":
         stop music fadeout 0.5
@@ -926,6 +930,7 @@ label end4:
     c "算了 我打你一顿, 这事情就这么算了"
     "第二天, 卡特曼还顺便告诉了全校肯尼翻垃圾桶的事"
     "结局四-- 意外财物"
+    $ unlock_ending("end4")
 menu:
     "回到上一个选项":
         scene bg class 2
@@ -1226,6 +1231,7 @@ label ql:
     "肯尼没有变得有钱, 但他那天晚上没有饿肚子"
     "这或许是本集唯一一个肯尼吃到东西的结局"
     "结局五-- 香蕉味的排泄物"
+    $ unlock_ending("end5")
     menu:
         "回到上一个选项":
             hide kenny
@@ -1315,6 +1321,7 @@ label ql:
         "肯尼的尸体在下水道里泡了三天, 第四天被水冲走了"
         "之后肯尼出现在学校操场, 没有人问他这几天去哪了"
         "结局六-- 下水道的悲剧"
+        $ unlock_ending("end6")
     menu:
         "回到前一个选项":
             scene bg room
@@ -1666,6 +1673,7 @@ label goth3:
     "我们学到了什么--"
     "不要玩火, 我的朋友们"
     "结局八-- 肮脏的烟火"
+    $ unlock_ending("end8")
     menu:
         "回到上一个选项":
             scene bg gate
@@ -1904,6 +1912,7 @@ label open1:
         "*嗡嗡* *嗡嗡*"
         "..."
         "结局七-- 黄色的房间"
+        $ unlock_ending("end7")
     menu:
         "回到主菜单":
             return
@@ -2043,6 +2052,7 @@ label negotiate:
     "肯尼最后一次睁开眼睛--"
     "然后他闭上了"
     "结局十一 -- 背叛"
+    $ unlock_ending("end11")
 menu:
     "回到上一个选项":
         scene bg gate
@@ -2067,7 +2077,7 @@ label run:
     "*开枪声*"
     play sound gun1 
     c "操! 我这枪准星是歪的!"
-    k "******* 翻译: 你这钱也是偷的?"
+    k "******* 翻译: 你这枪也是偷的?"
     c "关你屁事!"
     play sound plane
     "然后--"
@@ -2105,7 +2115,7 @@ label run:
     with None
     c "科比, 这不关你的事"
     with hpunch
-    ko "你他妈拿枪指着我的man 叫不管我的事?"
+    ko "你他妈拿枪指着我的man 叫不关我的事?"
     c "*叹息声*"
     with vpunch
     show cartman 3 at truecenter:
@@ -2207,6 +2217,7 @@ label run:
         c "你他妈!!"
         "TRUE END"
         "结局十-- 帮助"
+        $ unlock_ending("end10")
         "感谢您的游玩"
         "本集完"
         return
@@ -2294,7 +2305,8 @@ label run:
                             "从中我们学到什么--"
                             "孩子们不要相信佐巴扬"
                             ko "曼巴OUT"
-                            "结局八-- 凌晨四点南方公园的太阳"
+                            "结局九-- 凌晨四点南方公园的太阳"
+                            $ unlock_ending("end9")
                             menu:
                                 "回到主菜单":
                                     return
