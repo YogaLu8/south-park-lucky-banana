@@ -51,7 +51,7 @@
 ---
 
 ### 目录结构
-
+```
 south-park-lucky-banana/
 ├── game/
 │   ├── images/          # 角色立绘、背景
@@ -60,9 +60,8 @@ south-park-lucky-banana/
 │   ├── characters.rpy   # 角色定义
 │   └── options.rpy      # 项目配置
 ├──GUIDE.md
-├── README.md
-└── LICENSE
-
+└── README.md
+```
 ---
 
 ## 开发
