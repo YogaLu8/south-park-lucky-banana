@@ -1,0 +1,49 @@
+# Ren'Py 编译缓存
+game/cache/
+game/saves/
+game/*.rpyc
+game/*.rpyb
+game/*.rpymc
+
+# 打包产物
+game/archives/
+*.zip
+*.tar.gz
+*.rar
+
+# 分发目录
+dist/
+build/
+
+# 日志
+errors.txt
+log.txt
+traceback.txt
+*.txt.old
+game/errors.txt
+game/log.txt
+game/traceback.txt
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 环境变量
+.env
+
+# 本地测试截图
+/screenshots/
