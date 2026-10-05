@@ -9,13 +9,14 @@ define ko = Character("Kobe", color = "#663e06",image ="kobe")
 define m = Character("Michael", color = "#000000", image= "goth")
 define pe = Character("Peter", color = "#000000", image= "red")
 define c = Character("Cartman", color = "#b8b617", image= "cartman")
-define z = Character("佐巴扬")
+define z = Character("佐巴扬", color = "#7ba16e",image = "zuobayang")
 define p = Character("观众")
 define h = Character("主持人")
 define t = Character("老师")
 define who = Character("???")
 define n = Character("Autumn HanKey",image = "wife")
 define w = Character("Weedy", color = "#e046c1", image = "weddy")
+image side zuobayang = im.Scale("zuobayang.png",280,280)
 image side cartman = im.Scale("cartman.png",280,280)
 image side wife = im.Scale("wife.png",230,420)
 image side red = im.Scale("red normal.png",280,280)
@@ -271,7 +272,7 @@ label playground:
     with dissolve
     with hpunch
     c "啦啦啦啦啦 我听见有人在聊我最新的产品"
-    c "没错，我就是那个卖香蕉的人。5块8一根，童叟无欺，概不退款"
+    c "没错，我就是那个卖香蕉的人 5块8一根，童叟无欺，概不退款"
     s "你这香蕉哪来的"
     c "进货渠道是商业机密，斯坦 你这种穷人思维永远理解不了商业"
     s "你哪来的商业，你妈给你零花钱--"
@@ -1074,7 +1075,7 @@ label shit2:
     show kenny sleepy
     mr "肯尼 这就是成年人的生活 你迟早会懂的"
     show kenny lookright
-    mr "但是我可以给你一点机会。下水道这里堆积了一大堆废弃垃圾，如果你愿意帮我清理疏通水沟，我可以付给你工钱！"
+    mr "但是我可以给你一点机会 下水道这里堆积了一大堆废弃垃圾，如果你愿意帮我清理疏通水沟，我可以付给你工钱！"
     k "心想: 又来!?????"
 menu:
     "清理垃圾":
@@ -1091,7 +1092,7 @@ label bql:
     mr "但你知道吗，我年轻的时候也拒绝过很多活--"
     mr "现在我在下水道住"
     k angry "..."
-    mr "我不是在威胁你。我只是在陈述一个事实"
+    mr "我不是在威胁你-- 我只是在陈述一个事实"
     k sick "心想: 我再也不想碰屎尿屁了"
     scene bg black
     with fade
@@ -1289,7 +1290,7 @@ label ql:
         show mr at truecenter
         with dissolve
         mr "哇，干得相当不错！水沟已经疏通开啦！"
-        mr "既然你踏踏实实付出劳动，这是属于你的酬劳。"
+        mr "既然你踏踏实实付出劳动，这是属于你的酬劳"
         hide mr 
         show money 2:
             zoom 1.5
@@ -1359,7 +1360,7 @@ label ball:
     "科比低头凝视那颗泄气的篮球，双拳不自觉紧紧攥起，恨的肤色都黑了一号"
     show kenny lookright
     ko sit 3 "我什么都做不了 Bro..."
-    ko sit 4 "我不甘心就这样中断训练。距离校内选拔赛已经越来越近"
+    ko sit 4 "我不甘心就这样中断训练 距离校内选拔赛已经越来越近"
     show kenny sleepy
     ko sit 1 "可我现在就像失去螺旋桨的飞机, 只能重重地摔在地上 shit!!!"
     with hpunch
@@ -1377,7 +1378,7 @@ menu:
 
 label yes:
     $ kobe_help = True
-    k normal "******* 翻译：我这里刚好有攒的钱，先借你用吧。"
+    k normal "******* 翻译：我这里刚好有攒的钱，先借你用吧"
     ko sit 1 "Thanks MY man"
     with vpunch
     show kenny lookright
@@ -1402,7 +1403,7 @@ label yes:
 
 label no:
     k lookright "******* 翻译：抱歉老大……我现在也很缺钱，要攒钱买幸运香蕉"
-    ko "我理解。每个人都有自己要拼的东西。"
+    ko "我理解 每个人都有自己要拼的东西"
     ko sit 3"我也是 哪怕球瘪了我也练脚步--"
     hide kobe 
     with dissolve
